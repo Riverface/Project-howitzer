@@ -4,8 +4,8 @@ export class ApiHelper {
 	Get()
 	{
 		//return $.get(`http://localhost:5004/api/cards/`);
-		//return $.get('/DBs/cards.json');
-		return $.getJSON( "DBs/cards.json");
+		return $.get('/DBs/cards.json');
+		//return $.getJSON( "DBs/cards.json");
 	}
 	Post(obj)
 	{
