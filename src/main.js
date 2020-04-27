@@ -6,16 +6,16 @@ import './styles.css';
 let service = new ApiHelper();
 
 $(document).ready(function() {
-  let data = service.Acquire();
-	/*for (let i = 0; i < data.length; i++) {
-	   $(".output").append(data[i]);
-  }*/
+  let data = service.Get();
+
+  service.Post( { name: "TestPost" } );
+
   data.then(function(response) {
     console.log(response);
 
-    //inject(service.process($("#input").val(), response), myChart);
   	for (let i = 0; i < response.length; i++) {
   	   $(".output").append(response[i].name);
     }
   });
+
 });

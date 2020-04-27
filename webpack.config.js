@@ -25,7 +25,8 @@ module.exports = {
 			inject: 'body'
 		}),
 		new CopyPlugin([
-			{from:'src/IMG',to:'IMG'}
+			{from:'src/IMG',to:'IMG'},
+			{from:'src/DBs', to: 'DBs'}
 		]),
 		new Dotenv()
 	],

@@ -1,0 +1,18 @@
+[
+    {
+        "cardId": 0,
+        "name": "TestCard0"
+    },
+    {
+        "cardId": 1,
+        "name": "TestCard1"
+    },
+    {
+        "cardId": 2,
+        "name": "TestCard2"
+    },
+    {
+        "cardId": 3,
+        "name": "TestCard3"
+    },
+]
