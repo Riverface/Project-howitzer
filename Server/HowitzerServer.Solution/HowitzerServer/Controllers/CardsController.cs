@@ -25,5 +25,13 @@ namespace HowitzerServer.Controllers
       var query = _db.Cards.AsQueryable();
       return query.ToList();
     }
+
+    // POST api/cards
+    [HttpPost]
+    public void Post([FromBody] Card card)
+    {
+      _db.Cards.Add(card);
+      _db.SaveChanges();
+    }
   }
 }
