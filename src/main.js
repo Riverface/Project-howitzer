@@ -6,6 +6,12 @@ import './styles.css';
 let service = new ApiHelper();
 
 $(document).ready(function() {
+
+  $("#start-button").click(function () {
+    $('.jumbotron').slideUp();
+    $('#start-button').slideUp();
+  });
+
   let data = service.Acquire();
 	/*for (let i = 0; i < data.length; i++) {
 	   $(".output").append(data[i]);
