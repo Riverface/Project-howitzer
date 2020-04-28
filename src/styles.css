@@ -1,3 +1,11 @@
 body {
 	background-color: #7FDBFF;
 }
+
+.jumbotron {
+	text-align: center;
+}
+
+#start-button {
+	align-items: center;
+}
