@@ -1,7 +1,8 @@
 import $ from 'jquery';
 
-export class ApiHelper {
-	get()
+export class ApiHelper
+{
+	static get()
 	{
 		return $.get("DBs/cards.json");
 	}
