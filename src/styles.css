@@ -4,8 +4,5 @@ body {
 
 .jumbotron {
 	text-align: center;
-}
-
-#start-button {
-	align-items: center;
+	background-color: #7FDBFF;
 }
