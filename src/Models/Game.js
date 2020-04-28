@@ -19,7 +19,6 @@ export class Game
       game.allCards = response.map(function(e, i) {
           return new Card(e.name, i);
       })
-
     });
   }
 }
