@@ -2,6 +2,7 @@ import $ from 'jquery';
 import { ApiHelper } from './ApiHelper';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
+import png from './img/mainBackground.png';
 
 let service = new ApiHelper();
 
