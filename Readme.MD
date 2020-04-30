@@ -2,6 +2,15 @@
 
 A template of README best practices to make your README simple to understand and easy to use. 
 
+# Setting
+The apocalypse came with a solar flare.
+But not everything was lost.
+The manufacturers of great machines of war were taken entirely out of commission, but their creations were protected from this catastrophe given the advances of the military in solar shielding. In the panic, thieving the mechanical destroyers they used in global conflicts for years, thousands of soldiers abandoned their posts in search of shelter, power, and resources. 
+Years later, in a bunker, a navy admiral awakes from cryosleep.
+When he sees what his men have done his desolation turns to fury and he sets out into the wasteland to pave a path for new humanity and destroy everything that would dare stop him.
+
+
+
 ## Table of Contents
 
 - [Installation](#installation)
@@ -20,6 +29,7 @@ A template of README best practices to make your README simple to understand and
 ## Support
 
 Please [open an issue](https://github.com/riverface/project-howitzer/issues/) for support.
+
 
 ## Contributing
 
