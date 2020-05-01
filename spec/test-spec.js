@@ -21,10 +21,10 @@ describe("Card", function() {
 	});
 
 	it("Player moved cards", function() {
-		Card.moveFromId(player.hand, player.deck, 3);
+		Card.moveFromId(player.hand, player.main, 3);
 		expect(player.hand.length).toEqual(5);
-		expect(player.deck.length).toEqual(1);
-		expect(player.deck[0].cardId).toEqual(3);
+		expect(player.main.length).toEqual(1);
+		expect(player.main[0].cardId).toEqual(3);
 	});
 
 	it("Random card pick works appropriately", function() {

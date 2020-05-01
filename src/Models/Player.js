@@ -7,7 +7,14 @@ export class Player
 	{
     this.name = name;
 		this.hand = [];
-		this.deck = [];
+		this.main = [];
+		this.discard = [];
+		this.retire = [];
+
+		this.health = 100;
+		this.energy = 100;
+		this.energyCap = 100;
+		this.energyRegen = 5;
   }
 
 }
