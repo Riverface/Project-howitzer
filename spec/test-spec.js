@@ -2,15 +2,19 @@ import { Card } from './../src/Models/Card';
 import { Player } from './../src/Models/Player';
 
 describe("Card", function() {
-	let player = new Player("tests");
-	player.hand = [
-		new Card("test1", 1),
-		new Card("test2", 2),
-		new Card("test3", 3),
-		new Card("test4", 4),
-		new Card("test5", 5),
-		new Card("test6", 6)
-	];
+	var player;
+
+	beforeEach( function() {
+		player = new Player("tests");
+		player.hand = [
+			new Card("test1", 1),
+			new Card("test2", 2),
+			new Card("test3", 3),
+			new Card("test4", 4),
+			new Card("test5", 5),
+			new Card("test6", 6)
+		];
+  });
 
 	it("Player has cards", function() {
 		expect(player.hand.length).toEqual(6);
@@ -23,6 +27,11 @@ describe("Card", function() {
 		expect(player.hand.length).toEqual(5);
 		expect(player.deck.length).toEqual(1);
 		expect(player.deck[0].cardId).toEqual(3);
+	});
+
+	it("Random card pick works appropriately", function() {
+		console.log(Card.findFromRandom(player.hand));
+		expect(1).toEqual(1);
 	});
 
 });
