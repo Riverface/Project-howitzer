@@ -22,15 +22,19 @@ describe("Card", function() {
 
 	it("Player moved cards", function() {
 		Card.moveFromId(player.hand, player.deck, 3);
-		console.log(player.hand, "HAND");
-		console.log(player.deck, "DECK");
 		expect(player.hand.length).toEqual(5);
 		expect(player.deck.length).toEqual(1);
 		expect(player.deck[0].cardId).toEqual(3);
 	});
 
 	it("Random card pick works appropriately", function() {
-		console.log(Card.findFromRandom(player.hand));
+		console.log("RANDOM", Card.findFromRandom(player.hand).cardId, "RANDOM");
+		expect(1).toEqual(1);
+	});
+
+	it("Shuffle deck works appropriately", function() {
+		Card.shuffleDeck(player.hand);
+		console.log("SHUFFLED", player.hand.map(e => e.cardId), "SHUFFLED");
 		expect(1).toEqual(1);
 	});
 

@@ -31,6 +31,14 @@ export class Card
 
 	static shuffleDeck(deck)
 	{
-
+		var shuffled = [];
+		while (deck.length > 0)
+		{
+			shuffled.push(deck.splice(Math.floor(Math.random()*deck.length),1)[0]);
+		}
+		while (shuffled.length > 0)
+		{
+			deck.push(shuffled.splice(0,1)[0]);
+		}
 	}
 }
