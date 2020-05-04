@@ -1,10 +1,9 @@
 import $ from 'jquery';
-import { ApiHelper } from './ApiHelper';
+import { ApiHelper } from './Models/ApiHelper';
+import { Game } from './Models/Game';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import png from './img/mainBackground.png';
-
-let service = new ApiHelper();
 
 $(document).ready(function() {
 
@@ -20,9 +19,15 @@ $(document).ready(function() {
   data.then(function(response) {
     console.log(response);
 
-    //inject(service.process($("#input").val(), response), myChart);
-  	for (let i = 0; i < response.length; i++) {
-  	   $(".output").append(response[i].name);
+
+  let game = new Game();
+
+  $("button").on("click", function() {
+    console.log(game.allCards, "game.allCards");
+
+  	for (let i = 0; i < game.allCards.length; i++) {
+  	   $(".output").append(game.allCards[i].name);
     }
   });
+
 });
