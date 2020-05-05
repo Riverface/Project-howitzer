@@ -26,9 +26,13 @@ _`Card.findFromRandom(player.hand)`_
 _Returns the index of a `Card` in `DECK` from `ID`_
 _`Card.findIndexFromId(player.hand, "smite")`_
 # Card.moveFromId(array INITIALDECK, array TARGETDECK, int ID)
-_Moves a `Card` from `INITIALDECK` to `TARGET DECK` from `ID`_
+_Moves a `Card` from `INITIALDECK` to `TARGETDECK` from `ID`_
 _Returns nothing_
 _`Card.moveFromId(player.hand, player.discard, 3)`_
+# Card.copyFromId(array INITIALDECK, array TARGETDECK, int ID)
+_Makes a copy of a `Card` from `INITIALDECK` to `TARGETDECK` from `ID`_
+_Returns nothing_
+_`Card.copyFromId(game.allCards, player.main, 2)`_
 # Card.shuffleDeck(array DECK)
 _Shuffles the `Cards` in `DECK`, randomizes each `Card` position in `DECK`_
 _Returns nothing_
