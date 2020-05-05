@@ -1,6 +1,11 @@
 [
     {
-        "name": "TestCard0"
+        "name": "TestCard0",
+        "function":"",
+        "funcvar1":"",
+        "funcvar2":"",
+        "funcvar3":"",
+
     },
     {
         "name": "TestCard1"

@@ -1,5 +1,6 @@
 import { Card } from './../src/Models/Card';
 import { Player } from './../src/Models/Player';
+import { CardFunc } from './../src/Models/CardFunc';
 
 describe("Card", function() {
 	var player;
@@ -7,12 +8,17 @@ describe("Card", function() {
 	beforeEach( function() {
 		player = new Player("tests");
 		player.hand = [
-			new Card("test1", 1),
-			new Card("test2", 2),
-			new Card("test3", 3),
-			new Card("test4", 4),
-			new Card("test5", 5),
-			new Card("test6", 6)
+			new Card(
+				{
+					"name":"test1",
+					"function":"testFunc",
+					"funcvar1":2
+				}, 1),
+			new Card({"name":"test2"}, 2),
+			new Card({"name":"test3"}, 3),
+			new Card({"name":"test4"}, 4),
+			new Card({"name":"test5"}, 5),
+			new Card({"name":"test6"}, 6)
 		];
   });
 
@@ -36,6 +42,12 @@ describe("Card", function() {
 		Card.shuffleDeck(player.hand);
 		console.log("SHUFFLED", player.hand.map(e => e.cardId), "SHUFFLED");
 		expect(1).toEqual(1);
+	});
+
+	it("Can call function from string", function() {
+		const thisCard = Card.findFromId(player.hand, 1);
+		const testVar = CardFunc[thisCard.function](thisCard.funcvar1);
+		expect(testVar).toEqual(thisCard.funcvar1);
 	});
 
 });
