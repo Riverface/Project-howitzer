@@ -1,6 +1,7 @@
 [
     {
-        "name": "TestCard0"
+        "name": "TestCard0",
+        "function": "testFunc"
     },
     {
         "name": "TestCard1"
