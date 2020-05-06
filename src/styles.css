@@ -13,17 +13,17 @@ body {
 #core{
 	display: none;
 	float: left;
-	width: 300px 300px;
+	width: 150px;
 }
 
 #cockpit{
 	display: none;
 	float: left;
-	width: 300px 300px;
+	width: 100px;
 }
 
 #legs{
 	display: none;
 	float: left;
-	width: 300px 300px;
+	width: 150px;
 }
