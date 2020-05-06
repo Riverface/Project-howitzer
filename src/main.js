@@ -4,6 +4,9 @@ import { Game } from './Models/Game';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import png from './img/mainBackground.png';
+import png from './img/core.png';
+import png from './img/cockpit.png';
+import png from './img/legs.png';
 
 $(document).ready(function() {
 
