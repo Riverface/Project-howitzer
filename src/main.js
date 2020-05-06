@@ -4,9 +4,6 @@ import { Game } from './Models/Game';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import png from './img/mainBackground.png';
-import png from './img/core.png';
-import png from './img/cockpit.png';
-import png from './img/legs.png';
 
 $(document).ready(function() {
 
@@ -15,17 +12,17 @@ $(document).ready(function() {
     $('#start-button').slideUp();
   });
 
-  let data = service.Acquire();
+  // let data = service.Acquire();
 	/*for (let i = 0; i < data.length; i++) {
 	   $(".output").append(data[i]);
   }*/
-  data.then(function(response) {
-    console.log(response);
-
+  // data.then(function(response) {
+  //   console.log(response);
+  // });
 
   let game = new Game();
 
-  $("button").on("click", function() {
+  $("button#test").on("click", function() {
     console.log(game.allCards, "game.allCards");
 
   	for (let i = 0; i < game.allCards.length; i++) {
