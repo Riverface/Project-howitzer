@@ -9,3 +9,21 @@ body {
 	text-align: center;
 	background-color: #7FDBFF;
 }
+
+#core{
+	display: none;
+	float: left;
+	width: 300px 300px;
+}
+
+#cockpit{
+	display: none;
+	float: left;
+	width: 300px 300px;
+}
+
+#legs{
+	display: none;
+	float: left;
+	width: 300px 300px;
+}
