@@ -2,15 +2,22 @@ import $ from 'jquery';
 
 export class Card
 {
-	constructor(name, id)
+	constructor(obj, id)
 	{
 		this.cardId = id;
-    this.name = name;
+		for (const p in obj) {
+			this[p] = obj[p];
+		}
   }
 
 	static findFromId(deck, id)
 	{
 		return deck.find(x => x.cardId === id);
+	}
+
+	static findFromName(deck, name)
+	{
+		return deck.find(x => x.name === name);
 	}
 
 	static findFromRandom(deck)
@@ -29,16 +36,18 @@ export class Card
 		tgtDeck.push(initDeck.splice(Card.findIndexFromId(initDeck,id),1)[0]);
 	}
 
+	static copyFromId(initDeck, tgtDeck, id)
+	{
+		tgtDeck.push(Card.findFromId(initDeck, id));
+	}
+	
 	static shuffleDeck(deck)
 	{
-		var shuffled = [];
-		while (deck.length > 0)
-		{
-			shuffled.push(deck.splice(Math.floor(Math.random()*deck.length),1)[0]);
-		}
-		while (shuffled.length > 0)
-		{
-			deck.push(shuffled.splice(0,1)[0]);
-		}
+		// https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+    for (var i = deck.length-1; i > 0; i--) {
+	    const j = Math.floor(Math.random()*(i+1));
+	    [deck[i],deck[j]] = [deck[j],deck[i]];
+    }
 	}
+
 }

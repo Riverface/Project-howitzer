@@ -17,7 +17,7 @@ export class Game
     const data = ApiHelper.get();
     data.then(function(response) {
       game.allCards = response.map(function(e, i) {
-          return new Card(e.name, i);
+          return new Card(e, i);
       })
     });
   }
