@@ -10,20 +10,28 @@ body {
 	background-color: #7FDBFF;
 }
 
-#core{
+.parent {
 	display: none;
-	float: left;
-	width: 150px;
 }
 
 #cockpit{
-	display: none;
-	float: left;
+	display: block;
+	margin-top: 350px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60px;
+}
+
+#core{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 	width: 100px;
 }
 
 #legs{
-	display: none;
-	float: left;
-	width: 150px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100px;
 }

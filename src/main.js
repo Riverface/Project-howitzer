@@ -11,9 +11,7 @@ $(document).ready(function() {
   $("#start-button").click(function () {
     $('.jumbotron').slideUp();
     $('#start-button').slideUp();
-    $('#core').show();
-    $('#cockpit').show();
-    $('#legs').show();
+    $('.parent').show();
   });
 
   // let data = service.Acquire();
