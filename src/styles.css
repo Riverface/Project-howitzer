@@ -16,7 +16,7 @@ body {
 
 #cockpit{
 	display: block;
-	margin-top: 350px;
+	margin-top: 20px;
 	margin-left: auto;
 	margin-right: auto;
 	width: 60px;
@@ -34,4 +34,26 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	width: 100px;
+}
+
+#e-head {
+	display: block;
+	margin-top: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 40px;
+}
+
+#e-body {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60px;
+}
+
+#e-legs {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60px;
 }
