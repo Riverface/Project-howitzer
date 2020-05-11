@@ -11,5 +11,10 @@
     },
     {
         "name": "TestCard3"
+    },
+    {
+        "name": "AttackCardExample",
+        "function": "attackFuncExample",
+        "funcvar1": 10
     }
 ]
