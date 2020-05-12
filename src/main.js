@@ -11,6 +11,8 @@ $(document).ready(function() {
     $('.jumbotron').slideUp();
     $('#start-button').slideUp();
     $('.parent').show();
+    $('#attack').show();
+    $('#que').show();
   });
 
   // let data = service.Acquire();

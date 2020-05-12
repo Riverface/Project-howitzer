@@ -1,6 +1,6 @@
 ## Mech
 ```
--> HAS: Sprites: 
+-> HAS: Sprites:
 	-> Core
 	 -> Cockpit
 	   -> Hardpoint
@@ -76,7 +76,7 @@ Cycle Battery
 ## Enemy:
 ```
 ->HAS: ID
-->HAS: Name 
+->HAS: Name
 ->HAS: ATK, DEF, Shield, Durability per-part
 ->CAN: set INTENT by making primitive decisions based on stats and RNG
 ->HAS: 1-4 usable cards.
@@ -94,7 +94,7 @@ ALL Cards
 ```
 
 Part:
-->HAS: HP, CAP, ATK, Durability	
+->HAS: HP, CAP, ATK, Durability
 ->HAS: PV Cost
 ->CAN: Open up, close off, and add properties to INTENTs.
 ->MAGNITUDE:
@@ -116,14 +116,14 @@ Stretch Intents:
 ->Move further away from or closer to the enemy.
 
 
-Hinderances - 
+Hinderances -
 * Corrosion: Equipment is "Poisoned"
 * Mollification: Equipment's material is cheapened, attacks do more to affected equipment
 * Malfunction: One piece of Equipment is unusable
 * Concussion: Entire turn is missed
 * Flashed: Intent is chosen at random this turn
 
-Enhancements - 
+Enhancements -
 * Nano-implantation: Nanobots repair the equip
 * Tempering: Defense up
 * Target Tracking: Temporary percentage chance for critical hits
@@ -135,14 +135,14 @@ Enhancements -
 -> CAN: Move cards between decks, based on ID
 -> CAN: Find card based on ID
 -> CAN: Find card based on Position in Array
--> CAN: Damage Shields, wear out Durability on Parts, change INTENTIONS temporarily or permanently, 
+-> CAN: Damage Shields, wear out Durability on Parts, change INTENTIONS temporarily or permanently,
 -> CAN: Affect all stats, whether on a per-turn basis or a single time.
 
 
 Software:
 -> HAS: Type and Magnitude
 -> CAN: Move cards between decks, based on ID and position in deck (Going either direction through any pile, like first second third forward or backward)
--> CAN: 
+-> CAN:
 Enemies, depending on what kind of enemy they are, CAN have 1-4 cards.
 For the MVP, the initial enemy will have 2 of them and an otherwise stock frame.
 -> CAN: Multiply and/or divide stats for the duration of the fight.
@@ -157,5 +157,5 @@ Scene Stretch
 
 Combat loop:
 Player plays cards to bring out parts, sets intent per-part, then ends turn.
-Intents play out one by one, starting with defenses, then utilities, then attacks in that order until one or the other is dead. Generally this game will be organized in duels. 
+Intents play out one by one, starting with defenses, then utilities, then attacks in that order until one or the other is dead. Generally this game will be organized in duels.
 At the end of combat the player may choose one part or software to take from the enemy's mech.
