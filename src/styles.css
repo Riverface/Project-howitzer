@@ -1,12 +1,59 @@
 body {
 	background-color: #7FDBFF;
-}
-
-.background {
-	url('./img/mainBackground.png');
+	background-image: url('./img/mainBackground.png');
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 .jumbotron {
 	text-align: center;
 	background-color: #7FDBFF;
+}
+
+.parent {
+	display: none;
+}
+
+#cockpit{
+	display: block;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60px;
+}
+
+#core{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100px;
+}
+
+#legs{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100px;
+}
+
+#e-head {
+	display: block;
+	margin-top: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 40px;
+}
+
+#e-body {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60px;
+}
+
+#e-legs {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60px;
 }
