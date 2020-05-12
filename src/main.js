@@ -10,19 +10,20 @@ $(document).ready(function() {
   $("#start-button").click(function () {
     $('.jumbotron').slideUp();
     $('#start-button').slideUp();
+    $('.parent').show();
   });
 
-  let data = service.Acquire();
+  // let data = service.Acquire();
 	/*for (let i = 0; i < data.length; i++) {
 	   $(".output").append(data[i]);
   }*/
-  data.then(function(response) {
-    console.log(response);
-
+  // data.then(function(response) {
+  //   console.log(response);
+  // });
 
   let game = new Game();
 
-  $("button").on("click", function() {
+  $("button#test").on("click", function() {
     console.log(game.allCards, "game.allCards");
 
   	for (let i = 0; i < game.allCards.length; i++) {

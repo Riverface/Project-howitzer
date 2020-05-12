@@ -15,10 +15,19 @@
 
     },
     {
+
         "name": "Stock Shield",
         "function": "SShield",
         "type": "Part",
         "Order": "Instant"
+
+
+        "name": "TestCard3"
+    },
+    {
+        "name": "AttackCardExample",
+        "function": "attackFuncExample",
+        "funcvar1": 10
 
     }
 

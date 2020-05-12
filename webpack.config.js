@@ -13,16 +13,15 @@ module.exports = {
 	},
 	devtool: 'eval-source-map',
 	devServer: {
-		contentBase: './dist'
+		contentBase: './src'
 	},
 	plugins: [
 		new UglifyJsPlugin({ sourceMap: true }),
 		new UglifyJsPlugin(),
 		new CleanWebpackPlugin(['dist']),
 		new HtmlWebpackPlugin({
-			title: 'CoinCounter',
-			template: './src/index.html',
-			inject: 'body'
+			title: 'ProjectHowitzer',
+			template: './src/index.html'
 		}),
 		new CopyPlugin([
 			{from:'src/IMG',to:'IMG'},
@@ -45,9 +44,20 @@ module.exports = {
 				loader: "eslint-loader"
 			},
 			{
+				test: /\.html$/,
+				use: ["html-loader"]
+			},
+			{
 				test: /\.(png|svg|jpg|gif)$/,
 				use: [
-					'file-loader'
+					{
+						loader: 'file-loader',
+						options: {
+							name: '[name].[ext]',
+							outputPath: 'img/',
+							publicPath: 'img/'
+						}
+					}
 				]
 			},
 			{
