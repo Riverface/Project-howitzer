@@ -4,6 +4,7 @@ import { Game } from './Models/Game';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import png from './img/mainBackground.png';
+import { Draggable, Sortable, Plugins } from '@shopify/draggable';
 
 $(document).ready(function() {
 
