@@ -69,3 +69,18 @@ body {
 	margin-left: 15px;
 	margin-right: 15px;
 }
+
+.Snappable {
+  .BlockLayout--typeGrid {
+    grid-template-columns: repeat(2, 1fr);
+
+    @media screen and (min-width: get-breakpoint(tablet)) {
+      grid-template-rows: repeat(4, rows(3));
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media screen and (min-width: get-breakpoint(desktop)) {
+      grid-template-rows: repeat(4, rows(4));
+    }
+  }
+}

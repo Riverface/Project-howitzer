@@ -28,31 +28,23 @@
 				<div class="col-md-2">
 					<button type="button" class="btn btn-primary" id="attack">Start Attack</button>
 				</div>
-				<div class="col-md-2">
-					<div class="cards">
-
+				<article class="BlockLayout BlockLayout--typeGrid">
+					<div class="BlockWrapper">
+						{{ Block.render('Card', {index: 1, draggable: true, classes: ['draggable-source']}) }}
 					</div>
-				</div>
-				<div class="col-md-2">
-					<div class="cards">
-
+					<div class="BlockWrapper">
+						{{ Block.render('', {index: 2, draggable: true, classes: ['draggable-source']}) }}
 					</div>
-				</div>
-				<div class="col-md-2">
-					<div class="cards">
-
+					<div class="BlockWrapper">
+						{{ Block.render('', {index: 3, type: 'Stripes', classes: ['draggable-source']}) }}
 					</div>
-				</div>
-				<div class="col-md-2">
-					<div class="cards">
-
+					<div class="BlockWrapper">
+						{{ Block.render('', {index: 4, type: 'Stripes', classes: ['draggable-source']}) }}
 					</div>
-				</div>
-				<div class="col-md-2">
-					<div class="cards">
-
+					<div class="BlockWrapper">
+						{{ Block.render('', {index: 5, type: 'Stripes', classes: ['draggable-source']}) }}
 					</div>
-				</div>
+				</article>
 			</div>
 		</div>
 		<div class="output">
