@@ -2,8 +2,8 @@ import $ from 'jquery';
 
 export class ApiHelper
 {
-	static get()
+	static get(dbname)
 	{
-		return $.get("DBs/cards.json");
+		return $.get("DBs/"+dbname+".json");
 	}
 }
