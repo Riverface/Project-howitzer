@@ -12,14 +12,6 @@ $(document).ready(function() {
     $('#start-button').slideUp();
   });
 
-  let data = service.Acquire();
-	/*for (let i = 0; i < data.length; i++) {
-	   $(".output").append(data[i]);
-  }*/
-  data.then(function(response) {
-    console.log(response);
-
-
   let game = new Game();
 
   $("button").on("click", function() {
@@ -29,5 +21,4 @@ $(document).ready(function() {
   	   $(".output").append(game.allCards[i].name);
     }
   });
-
 });

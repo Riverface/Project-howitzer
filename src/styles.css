@@ -3,7 +3,7 @@ body {
 }
 
 .background {
-	url('./img/mainBackground.png');
+	background-image: "./img/mainBackground.png";
 }
 
 .jumbotron {
