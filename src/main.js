@@ -13,7 +13,7 @@ $(document).ready(function() {
     $('#start-button').slideUp();
     $('.parent').show();
     $('#attack').show();
-    $('#que').show();
+    $('.cards').show();
   });
 
   // let data = service.Acquire();
