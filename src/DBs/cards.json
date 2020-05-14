@@ -1,19 +1,30 @@
 [{
         "name": "TestCard0",
-        "function": "testFunc"
+        "target": "Player/Single/All/Random",
+        "function": "testFunc",
+        "type": "Part, Software, Maneuver",
+        "Order": "N/A"
     },
     {
-        "name": "TestCard1"
+        "ID": "1",
+        "name": "Gatling Gun",
+        "function": "GGun",
+        "target": "Player",
+        "type": "Part",
+        "Order": "Instant"
+
     },
     {
-        "name": "TestCard2"
-    },
-    {
-        "name": "TestCard3"
+
+        "name": "Stock Shield",
+        "function": "SShield",
+        "type": "Part",
+        "Order": "Instant"
     },
     {
         "name": "AttackCardExample",
         "function": "attackFuncExample",
         "funcvar1": 10
+
     }
 ]
