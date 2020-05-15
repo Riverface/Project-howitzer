@@ -1,12 +1,13 @@
 body {
-	background-color: #7FDBFF;
+    background-color: #7FDBFF;
 }
 
 .background {
-	background-image: "./img/mainBackground.png";
+    background-image: url('./img/mainBackground.png');
+
 }
 
 .jumbotron {
-	text-align: center;
-	background-color: #7FDBFF;
+    text-align: center;
+    background-color: #7FDBFF;
 }

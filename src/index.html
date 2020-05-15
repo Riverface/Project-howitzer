@@ -1,23 +1,52 @@
 <!DOCTYPE html>
 <html>
-	<head>
 
-		<title>Project Howitzer</title>
+<head>
 
-    <meta charset="utf-8"/>
-		<title>test</title>
+    <title>Project Howitzer</title>
 
-	</head>
-	<body>
-		<div class="container">
-			<div class="jumbotron">
-				<h1>H.O.W.I.E</h1>
-			</div>
-			<button type="button" class="btn btn-danger btn-lg btn-block" id="start-button">Start Game</button>
-		</div>
-		<div class="output">
-		</div>
+    <meta charset="utf-8" />
+    <title>test</title>
 
-		<button type="button">TESTTEST</button>
-	</body>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>H.O.W.I.E</h1>
+        </div>
+        <div class="parent">
+            <!-- ./img/enemy-head.png
+./img/enemy-body.png
+./img/enemy-legs.png -->
+            <img id="e-head">
+            <img id="e-body">
+            <img id="e-legs">
+        </div>
+        <button type="button" class="btn btn-danger btn-lg btn-block" id="start-button">Start Game</button>
+        <div class="parent">
+            <!-- ./img/cockpit.png
+./img/core.png
+./img/legs.png -->
+            <img id="cockpit">
+            <img id="core">
+            <img id="legs">
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <button type="button" class="btn btn-primary" id="attack">Start Attack</button>
+            </div>
+            <div class="col-md-6">
+                <!-- cards queue goes here. -->
+                <!-- ./img/card-que.png -->
+                <img id="queue">
+            </div>
+        </div>
+    </div>
+    <div class="output">
+    </div>
+
+    <button type="button" id="test">TESTTEST</button>
+</body>
+
 </html>

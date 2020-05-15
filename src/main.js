@@ -7,10 +7,11 @@ import png from './img/mainBackground.png';
 
 $(document).ready(function() {
 
-  $("#start-button").click(function () {
-    $('.jumbotron').slideUp();
-    $('#start-button').slideUp();
-  });
+    $("#start-button").click(function() {
+        $('.jumbotron').slideUp();
+        $('#start-button').slideUp();
+    });
+
 
   let game = new Game();
 
