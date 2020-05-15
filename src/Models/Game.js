@@ -30,6 +30,5 @@ export class Game {
         //Loop that iterates through all cards in queue, animation will play.
 
 
-
     }
 }

@@ -24,7 +24,6 @@ $(document).ready(function() {
                     game.player.hand.push(Card.findFromId(2));
                     game.player.hand.push(Card.findFromId(1));
                 }
-
         }
     });
 });

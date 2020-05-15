@@ -1,0 +1,11 @@
+[{
+        "name": "TestEnemy0",
+        "cards": ["TestCard2", "TestCard3"],
+        "health": 100
+    },
+    {
+        "name": "TestEnemy1",
+        "cards": ["TestCard2", "TestCard3"],
+        "health": 100
+    }
+]

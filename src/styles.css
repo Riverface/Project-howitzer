@@ -10,3 +10,7 @@ body {
     text-align: center;
     background-color: #7FDBFF;
 }
+
+.hidden {
+    visibility: hidden;
+}
