@@ -1,8 +1,7 @@
-import $ from 'jquery';
 import { ApiHelper } from './ApiHelper';
 import { Player } from './Player';
 import { Card } from './Card';
-
+import { Enemy } from './Enemy';
 export class Game {
     constructor() {
             this.player = new Player("testPlayer");
@@ -19,9 +18,12 @@ export class Game {
             })
         });
     }
-    static Queue() {
-        this.player.queue.forEach(() => {
+    static StartTurn() {
 
+    }
+    static Queue() {
+        this.player.queue.forEach((queuecard) => {
+            queuecard.function();
         });;
     }
     static endTurn() {

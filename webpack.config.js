@@ -6,7 +6,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 const Dotenv = require('dotenv-webpack')
 
 module.exports = {
-<<<<<<< HEAD
+
     entry: './src/main.js',
     output: {
         filename: 'bundle.js',
@@ -82,81 +82,3 @@ module.exports = {
         ]
     }
 };
-=======
-	entry: './src/main.js',
-	output: {
-		filename: 'bundle.js',
-		path: path.resolve(__dirname, 'dist')
-	},
-	devtool: 'eval-source-map',
-	devServer: {
-		contentBase: './src'
-	},
-	plugins: [
-		new UglifyJsPlugin({ sourceMap: true }),
-		new UglifyJsPlugin(),
-		new CleanWebpackPlugin(['dist']),
-		new HtmlWebpackPlugin({
-			title: 'ProjectHowitzer',
-			template: './src/index.html'
-		}),
-		new CopyPlugin([
-			{from:'src/IMG',to:'IMG'},
-			{from:'src/DBs', to: 'DBs'}
-		]),
-		new Dotenv()
-	],
-	module: {
-		rules: [
-			{
-				test: /\.css$/,
-				use: [
-					'style-loader',
-					'css-loader'
-				]
-			},
-			{
-				test: /\.js$/,
-				exclude: /node_modules/,
-				loader: "eslint-loader"
-			},
-			{
-				test: /\.html$/,
-				use: ["html-loader"]
-			},
-			{
-				test: /\.(png|svg|jpg|gif)$/,
-				use: [
-					{
-						loader: 'file-loader',
-						options: {
-							name: '[name].[ext]',
-							outputPath: 'img/',
-							publicPath: 'img/'
-						}
-					}
-				]
-			},
-			{
-				test: /\.js$/,
-				exclude: [
-					/node_modules/,
-					/spec/
-				],
-				loader: "eslint-loader"
-			},
-			{
-				test: /\.js$/,
-				exclude: [
-					/node_modules/,
-					/spec/
-				],
-				loader: "babel-loader",
-				options: {
-					presets: ['es2015']
-				}
-			}
-		]
-	}
-};
->>>>>>> b7b62e583338a92611756e34a8fcc8ed5b3b745e
