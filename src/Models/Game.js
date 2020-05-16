@@ -24,9 +24,18 @@ export class Game
     {
       CardFunc[cardsActive[i].function](cardsActive[i].funcvar1, scene.enemy);
     }
+    for (var j = 0; j < cardsActive.length; j++)
+    {
+      Card.moveFromId(scene.player.hand, scene.player.discard, cardsActive[j].cardId);
+    }
     $("#pl-hp").html(scene.player.health);
     $("#en-hp").html(scene.enemy.health);
 
+    if (scene.player.hand.length === 0 && scene.player.main.length === 0) {
+      Card.moveAll(scene.player.discard, scene.player.main);
+    }
+
+    Card.draw(scene.player.main, scene.player.hand, scene.player.drawRate);
     scene.turn++;
   }
 

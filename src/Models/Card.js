@@ -31,6 +31,11 @@ export class Card
 		return deck.findIndex(x => x.cardId === id);
 	}
 
+	static findIndexFromRandom(deck)
+	{
+		return deck.findIndex(x => x.cardId === Math.floor(Math.random() * deck.length));
+	}
+
 	static moveFromId(initDeck, tgtDeck, id)
 	{
 		tgtDeck.push(initDeck.splice(Card.findIndexFromId(initDeck,id),1)[0]);
@@ -46,6 +51,11 @@ export class Card
 		tgtDeck.push(Card.findFromName(initDeck, name));
 	}
 
+	static moveFromRandom(initDeck, tgtDeck)
+	{
+		tgtDeck.push(initDeck.splice(Card.findIndexFromRandom(initDeck),1)[0]);
+	}
+
 	static shuffleDeck(deck)
 	{
 		// https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
@@ -58,5 +68,16 @@ export class Card
 	static moveAll(initDeck, tgtDeck)
 	{
 		tgtDeck.push(...initDeck.splice(0));
+	}
+
+	static draw(initDeck, tgtDeck, num)
+	{
+		for (var i = 0; i < num; i++)
+		{
+			if (initDeck[0])
+			{
+				Card.moveFromRandom(initDeck, tgtDeck);
+			}
+		}
 	}
 }

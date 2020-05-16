@@ -15,8 +15,7 @@ export class Scene
   {
     for (var i = 0; i < scene.player.cards.length; i++)
     {
-      Card.copyFromName(game.allCards, scene.player.main, scene.player.cards[i]);
+      Card.copyFromName(game.allCards, scene.player.hand, scene.player.cards[i]);
     }
-    console.log(scene.player.main);
   }
 }

@@ -18,6 +18,15 @@ function drawCard(name)
   return newCard;
 }
 
+function refresh(game)
+{
+  $(".playerCards").empty();
+  for (var i = 0; i < game.currentScene.player.hand.length; i++)
+  {
+    $(".playerCards").append(drawCard(game.currentScene.player.hand[i].name));
+  }
+}
+
 $(document).ready(function()
 {
 
@@ -25,16 +34,10 @@ $(document).ready(function()
 
   $("#init").on("click", function()
   {
-    console.log($(this).attr("id"));
     Game.loadScene(game);
-    console.log("Initialized");
     $("#init").addClass("hidden");
     $("#wholeGame").removeClass("hidden");
-    for (var i = 0; i < game.currentScene.player.main.length; i++)
-    {
-      $(".cards").append(drawCard(game.currentScene.player.main[i].name));
-    }
-    //Game.tick(game, [2]);
+    refresh(game);
   });
 
   $("#turn").on("click", function()
@@ -45,7 +48,7 @@ $(document).ready(function()
       Card.copyFromName(game.allCards, cardsDeployed, $(this).attr("title"));
       $(this).removeClass("active");
     });
-    console.log(cardsDeployed);
     Game.tick(game.currentScene, cardsDeployed);
+    refresh(game);
   })
 });

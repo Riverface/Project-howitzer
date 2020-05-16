@@ -1,12 +1,16 @@
 [
     {
         "name": "TestPlayer0",
-        "cards": ["TestCard0", "TestCard1"],
-        "health": 100
+        "cards": ["TestCard0", "TestCard1", "TestCard2", "TestCard3"],
+        "health": 100,
+        "drawRate": 2, 
+        "maxHand": 3
     },
     {
         "name": "TestPlayer1",
         "cards": ["TestCard2", "TestCard3"],
-        "health": 100
+        "health": 100,
+        "drawRate": 2,
+        "maxHand": 3
     }
 ]
