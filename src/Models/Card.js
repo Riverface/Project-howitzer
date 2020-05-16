@@ -50,5 +50,8 @@ export class Card
     }
 	}
 
+	static moveAll(initDeck, tgtDeck)
+	{
+		tgtDeck.push(...initDeck.splice(0));
+	}
 }
-

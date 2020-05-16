@@ -3,7 +3,6 @@ import { Player } from './Player';
 import { Card } from './Card';
 import { Enemy } from './Enemy';
 
-
 export class Game
 {
   constructor()
@@ -25,18 +24,6 @@ export class Game
     });
   }
 
-    static StartTurn() {
-
-    }
-    static Queue() {
-        this.player.queue.forEach((queuecard) => {
-            queuecard.function();
-        });;
-    }
-    static endTurn() {
-        //Loop that iterates through all cards in queue, animation will play.
-
-
   static loadEnemies(game)
   {
     const data = ApiHelper.get("enemies");
@@ -46,7 +33,4 @@ export class Game
       })
     });
   }
-
-}
-    }
 }

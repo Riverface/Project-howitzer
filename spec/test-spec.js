@@ -49,4 +49,10 @@ describe("Card", function() {
         expect(testVar).toEqual(thisCard.funcvar1);
     });
 
+    it("Can move all cards from one deck to another", function() {
+        Card.moveAll(player.hand, player.main);
+        expect(player.hand.length).toEqual(0);
+        expect(player.main.length).not.toEqual(0);
+        console.log("MAIN", player.main);
+    });
 });
