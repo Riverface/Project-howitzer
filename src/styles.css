@@ -1,17 +1,14 @@
 body {
-    background-color: #7FDBFF;
+    background-image: url("./IMG/mainBackground.png");
+    background-size: cover;
 }
 
-.background {
-    background-image: url('./img/mainBackground.png');
-
-}
-
-.jumbotron {
-    text-align: center;
-    background-color: #7FDBFF;
+.card {
+  width: 100px;
+  float: left;
 }
 
 .hidden {
     visibility: hidden;
+    display: none;
 }

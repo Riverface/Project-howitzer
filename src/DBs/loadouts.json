@@ -1,11 +1,11 @@
 [
     {
-        "name": "TestEnemy0",
-        "cards": ["TestCard2", "TestCard3"],
+        "name": "TestPlayer0",
+        "cards": ["TestCard0", "TestCard1"],
         "health": 100
     },
     {
-        "name": "TestEnemy1",
+        "name": "TestPlayer1",
         "cards": ["TestCard2", "TestCard3"],
         "health": 100
     }

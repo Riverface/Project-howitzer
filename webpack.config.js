@@ -20,7 +20,7 @@ module.exports = {
 		new UglifyJsPlugin(),
 		new CleanWebpackPlugin(['dist']),
 		new HtmlWebpackPlugin({
-			title: 'CoinCounter',
+			title: 'ProjectHowitzer',
 			template: './src/index.html',
 			inject: 'body'
 		}),

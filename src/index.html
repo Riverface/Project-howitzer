@@ -2,45 +2,17 @@
 <html>
 
 <head>
-
     <title>Project Howitzer</title>
-
     <meta charset="utf-8" />
-    <title>test</title>
-
 </head>
 
 <body>
-    <div class="container">
-        <div class="jumbotron">
-            <h1>H.O.W.I.E</h1>
-        </div>
-        <div class="parent">
-            <img src="./img/enemy-goblin.png" class="hidden" id="e-head">
+    <button type="button" id="init">INITIALIZE</button>
 
-        </div>
-        <button type="button" class="btn btn-danger btn-lg btn-block" id="start-button">Start Game</button>
-        <div class="parent">
-
-            <img src="./img/cockpit.png" class="hidden" id="cockpit">
-            <img src="./img/core.png" class="hidden" id="core">
-            <img src="./img/legs.png" class="hidden" id="legs">
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <button type="button" class="btn btn-primary" id="attack">Start Attack</button>
-            </div>
-            <div class="col-md-6">
-                <!-- cards queue goes here. -->
-                <!-- ./img/card-que.png -->
-                <img id="queue">
-            </div>
-        </div>
+    <div class="wholeField">
+      ENEMY HP: <span id="en-hp"></span>
+      <div class="cards"></div>
     </div>
-    <div class="output">
-    </div>
-
-    <button type="button" id="test">TESTTEST</button>
 </body>
 
 </html>

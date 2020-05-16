@@ -7,7 +7,7 @@ export class CardFunc {
 
     // CAN BE CALLED VIA
     // CardFunc[card.function](card.funcvar1, targetobject);
-    static attackFuncExample(dmg, tgt) {
+    static attack(dmg, tgt) {
       tgt.health -= dmg;
     }
 }

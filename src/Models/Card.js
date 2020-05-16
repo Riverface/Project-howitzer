@@ -41,6 +41,11 @@ export class Card
 		tgtDeck.push(Card.findFromId(initDeck, id));
 	}
 
+	static copyFromName(initDeck, tgtDeck, name)
+	{
+		tgtDeck.push(Card.findFromName(initDeck, name));
+	}
+
 	static shuffleDeck(deck)
 	{
 		// https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array

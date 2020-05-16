@@ -1,17 +1,16 @@
 import $ from 'jquery';
-import { Card } from './Card';
 
-export class Player {
-    constructor(name) {
-        this.name = name;
-        this.hand = []; // ACTIVE cards
-        this.main = []; // cards IN RESERVE
-        this.discard = []; // spent CARDS
-        this.health = 100;
-        /*this.energy = 100;
-        this.energyCap = 100;
-        this.energyRegen = 5;*/
-    }
-
+export class Player
+{
+	constructor(obj, id)
+	{
+		this.playerId = id;
+		this.hand = [];
+    this.main = [];
+		this.discard = [];
+		for (const p in obj) {
+			this[p] = obj[p];
+		}
+  }
 
 }

@@ -4,6 +4,6 @@ export class ApiHelper
 {
 	static get(dbname)
 	{
-		return $.get("DBs/"+dbname+".json");
+		return $.get(`DBs/${dbname}.json`);
 	}
 }

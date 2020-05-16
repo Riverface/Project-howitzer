@@ -1,17 +1,25 @@
+import $ from 'jquery';
 import { ApiHelper } from './ApiHelper';
 import { Player } from './Player';
 import { Card } from './Card';
 import { Enemy } from './Enemy';
+import { Scene } from './Scene';
 
 export class Game
 {
   constructor()
   {
-    this.player = new Player("testPlayer");
     this.allCards = [];
     this.allEnemies = [];
+    this.allLoadouts = [];
+    this.currentScene;
     Game.loadCards(this);
     Game.loadEnemies(this);
+    Game.loadLoadouts(this);
+  }
+
+  static tick(game, cardId) {
+    $("#en-hp").html(game.currentScene.enemy.health);
   }
 
   static loadCards(game)
@@ -32,5 +40,20 @@ export class Game
           return new Enemy(e, i);
       })
     });
+  }
+
+  static loadLoadouts(game)
+  {
+    const data = ApiHelper.get("loadouts");
+    data.then(function(response) {
+      game.allLoadouts = response.map(function(e, i) {
+          return new Player(e, i);
+      })
+    });
+  }
+
+  static loadScene(game)
+  {
+    game.currentScene = new Scene(game);
   }
 }
