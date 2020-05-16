@@ -2,6 +2,7 @@ import $ from 'jquery';
 import { ApiHelper } from './ApiHelper';
 import { Player } from './Player';
 import { Card } from './Card';
+import { CardFunc } from './CardFunc';
 import { Enemy } from './Enemy';
 import { Scene } from './Scene';
 
@@ -18,8 +19,15 @@ export class Game
     Game.loadLoadouts(this);
   }
 
-  static tick(game, cardId) {
-    $("#en-hp").html(game.currentScene.enemy.health);
+  static tick(scene, cardsActive) {
+    for (var i = 0; i < cardsActive.length; i++)
+    {
+      CardFunc[cardsActive[i].function](cardsActive[i].funcvar1, scene.enemy);
+    }
+    $("#pl-hp").html(scene.player.health);
+    $("#en-hp").html(scene.enemy.health);
+
+    scene.turn++;
   }
 
   static loadCards(game)

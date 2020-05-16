@@ -2,26 +2,26 @@
     {
         "name": "TestCard0",
         "function": "attack",
-        "damage": 10
+        "funcvar1": 10
     },
     {
         "name": "TestCard1",
         "function": "attack",
-        "damage": 10
+        "funcvar1": 10
     },
     {
         "name": "TestCard2",
         "function": "attack",
-        "damage": 10
+        "funcvar1": 10
     },
     {
         "name": "TestCard3",
         "function": "attack",
-        "damage": 10
+        "funcvar1": 10
     },
     {
         "name": "Gatling",
         "function": "attack",
-        "damage": 10
+        "funcvar1": 10
     }
 ]

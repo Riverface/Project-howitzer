@@ -9,9 +9,14 @@
 <body>
     <button type="button" id="init">INITIALIZE</button>
 
-    <div class="wholeField">
+    <div id="wholeGame" class="hidden">
+      PLAYER HP: <span id="pl-hp"></span>
       ENEMY HP: <span id="en-hp"></span>
       <div class="cards"></div>
+      <button type="button" id="turn">DO IT</button>
+    </div>
+    <div class="hidden">
+			<span class="card" id="templateCard" title="cardTemplate"><img src="./IMG/Cards/Cardtemplate.png" alt=""></span>
     </div>
 </body>
 
