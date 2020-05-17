@@ -32,7 +32,6 @@ export class Game
       Card.moveAll(scene[who].discard, scene[who].main);
     }
 
-    console.log("Enemy?", scene["enemy"].name);
     Card.draw(scene[who].main, scene[who].hand, scene[who].drawRate);
 
     scene.turn++;

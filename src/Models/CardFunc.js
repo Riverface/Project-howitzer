@@ -8,7 +8,7 @@ export class CardFunc {
     // CAN BE CALLED VIA
     // CardFunc[card.function](card.funcvar1, targetobject);
     static attack(scene, dmg, dealer) {
-      if (dealer === scene.player)
+      if (dealer === scene.player) // Messy function, consider cleanup
       {
         scene.enemy.health -= dmg;
       }

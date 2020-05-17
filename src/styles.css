@@ -3,14 +3,17 @@ body {
     background-size: cover;
 }
 
-.card {
-  width: 100px;
+.playingCard {
+  width: 200px;
   float: left;
+  background-color: #ffffff;
+  border-radius: 10px;
 }
 
-.card img {
+.playingCard img {
   width: 100%;
-  height: 100%;
+  border-radius: 10px;
+  border: 1px solid #000000;
 }
 
 .hidden {
@@ -24,4 +27,13 @@ body {
 
 .clearBoth {
   clear: both;
+}
+
+.row {
+  margin: 0px;
+}
+
+.cardName , .cardFunc , .cardVar1 {
+  border-radius: 10px;
+  border: 1px solid #000000;
 }

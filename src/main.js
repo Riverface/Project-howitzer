@@ -4,12 +4,15 @@ import { Card } from './Models/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 
-function drawCard(name, enemy)
+function drawCard(card, enemy)
 {
   var newCard = $("#templateCard").clone();
-  newCard.attr("id",`card-${name}`);
-	newCard.attr("title",name);
-  newCard.find("img").attr("src",`./IMG/CARDS/${name}.png`);
+  newCard.attr("id",`card-${card.name}`);
+	newCard.attr("title",card.name);
+  newCard.find("img").attr("src",`./IMG/CARDS/${card.name}.png`);
+  newCard.find(".cardName").text(card.name);
+  newCard.find(".cardFunc").text(card.function.toUpperCase());
+  newCard.find(".cardVar1").text(card.funcvar1);
 
   if (enemy !== true)
   {
@@ -25,13 +28,13 @@ function refresh(game)
   $(".playerCards").empty();
   for (var i = 0; i < game.currentScene.player.hand.length; i++)
   {
-    $(".playerCards").append(drawCard(game.currentScene.player.hand[i].name, false));
+    $(".playerCards").append(drawCard(game.currentScene.player.hand[i], false));
   }
 
   $(".enemyCards").empty();
   for (var j = 0; j < game.currentScene.enemy.hand.length; j++)
   {
-    $(".enemyCards").append(drawCard(game.currentScene.enemy.hand[j].name, true));
+    $(".enemyCards").append(drawCard(game.currentScene.enemy.hand[j], true));
   }
 
   $("#pl-hp").html(game.currentScene.player.health);

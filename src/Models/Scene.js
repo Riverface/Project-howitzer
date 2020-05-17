@@ -8,21 +8,17 @@ export class Scene
 		this.player = $.extend({}, game.allLoadouts[0]);
 		this.enemy = $.extend({}, game.allEnemies[0]);
     this.turn = 0; // ODDS ARE PLAYER, EVENS ARE ENEMY;
-    Scene.populateUnits(game, this)
+		//this.activeUnits = ["player", "enemy"];
+    Scene.populateUnits(game, this, "player");
+    Scene.populateUnits(game, this, "enemy");
   }
 
-  static populateUnits(game, scene)
+  static populateUnits(game, scene, who)
   {
-    for (var i = 0; i < scene.player.cards.length; i++)
+    for (var i = 0; i < scene[who].cards.length; i++)
     {
-      Card.copyFromName(game.allCards, scene.player.main, scene.player.cards[i]);
+      Card.copyFromName(game.allCards, scene[who].main, scene[who].cards[i]);
     }
-		Card.draw(scene.player.main, scene.player.hand, scene.player.drawRate);
-
-    for (var j = 0; j < scene.enemy.cards.length; j++)
-    {
-      Card.copyFromName(game.allCards, scene.enemy.main, scene.enemy.cards[j]);
-    }
-		Card.draw(scene.enemy.main, scene.enemy.hand, scene.enemy.drawRate);
-  }
+		Card.draw(scene[who].main, scene[who].hand, scene[who].drawRate);
+	}
 }
