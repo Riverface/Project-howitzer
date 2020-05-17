@@ -5,6 +5,7 @@ import { Card } from './Card';
 import { CardFunc } from './CardFunc';
 import { Enemy } from './Enemy';
 import { Scene } from './Scene';
+import { Sidebar } from './Sidebar';
 
 export class Game
 {
@@ -20,6 +21,7 @@ export class Game
   }
 
   static tick(scene, cardsActive, who) {
+    Sidebar.log(`Tick!`);
     const totalCost = cardsActive.reduce(function(con, e) {
       return con+e.cost
     }, 0);
@@ -27,6 +29,7 @@ export class Game
     {
       for (var i = 0; i < cardsActive.length; i++)
       {
+        Sidebar.log(`${who}: used ${cardsActive[i].name}! ${cardsActive[i].function}!`);
         CardFunc[cardsActive[i].function](scene, cardsActive[i].funcvar1, scene[who]);
         scene[who].energy -= cardsActive[i].cost;
       }
@@ -35,14 +38,21 @@ export class Game
         Card.moveFromId(scene[who].hand, scene[who].discard, cardsActive[j].cardId);
       }
     } else {
-      console.log(who, "Overloaded!");
+      Sidebar.log(`${who}: Overloaded!`);
     }
     if (scene[who].hand.length === 0 && scene[who].main.length === 0) {
       Card.moveAll(scene[who].discard, scene[who].main);
+      Sidebar.log(`${who}: Cards moved from Discard to Main.`);
     }
 
     Card.draw(scene[who].main, scene[who].hand, scene[who].drawRate);
+    Sidebar.log(`${who}: Drew.`);
+
     scene[who].energy += scene[who].energyRegen;
+    if (scene[who].energy > scene[who].maxEnergy) {
+      scene[who].energy = scene[who].maxEnergy;
+    }
+    
     scene.turn++;
 
     if (scene.turn%2===0) {

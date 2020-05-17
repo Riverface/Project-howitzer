@@ -10,20 +10,67 @@
     <button type="button" id="init">INITIALIZE</button>
 
     <div id="wholeGame" class="hidden">
-      <div class="enemyCards clearBoth"></div>
-      <div class="clearBoth">
-        PLAYER HP: <span id="pl-hp"></span><br/>
-        PLAYER EN: <span id="pl-en"></span></br>
-        ENEMY HP: <span id="en-hp"></span><br/>
-        ENEMY EN: <span id="en-en"></span></br>
+      <div>
+        <div class="clearBoth">
+          <div class="playingCard" id="enemy">
+            <img src="./IMG/CARDS/Cardtemplate.png" alt="">
+            <div class="row">
+              <div class="col-md-12 enemyName">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                HEALTH
+              </div>
+              <div class="col-md-6 en-hp">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                ENERGY
+              </div>
+              <div class="col-md-6 en-en">
+              </div>
+            </div>
+          </div>
+          <div class="enemyCards"></div>
+        </div>
+        <div class="clearBoth">
+          <button type="button" id="turn">DO IT</button>
+        </div>
+        <div class="clearBoth">
+          <div class="playingCard" id="player">
+            <img src="./IMG/CARDS/Cardtemplate.png" alt="">
+            <div class="row">
+              <div class="col-md-12 playerName">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                HEALTH
+              </div>
+              <div class="col-md-6 pl-hp">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                ENERGY
+              </div>
+              <div class="col-md-6 pl-en">
+              </div>
+            </div>
+          </div>
+          <div class="playerCards"></div>
+        </div>
+        <div class="clearBoth sidebarLog">
+        </div>
       </div>
-      <div class="playerCards clearBoth"></div>
-      <button type="button" id="turn">DO IT</button>
     </div>
+
     <div class="hidden">
 
 			<div class="playingCard" id="templateCard" title="cardTemplate">
-        <img src="./IMG/Cards/Cardtemplate.png" alt="">
+        <img src="./IMG/CARDS/Cardtemplate.png" alt="">
         <div class="row">
           <div class="col-md-12 cardName">
           </div>

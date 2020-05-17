@@ -3,6 +3,7 @@ import { Game } from './Models/Game';
 import { Card } from './Models/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
+import { Sidebar } from './Models/Sidebar';
 
 function drawCard(card, enemy)
 {
@@ -38,11 +39,14 @@ function refresh(game)
     $(".enemyCards").append(drawCard(game.currentScene.enemy.hand[j], true));
   }
 
-  $("#pl-hp").html(game.currentScene.player.health);
-  $("#en-hp").html(game.currentScene.enemy.health);
+  $(".playerName").html(game.currentScene.player.name);
+  $(".pl-hp").html(game.currentScene.player.health);
+  $(".pl-en").html(game.currentScene.player.energy);
 
-  $("#pl-en").html(game.currentScene.player.energy);
-  $("#en-en").html(game.currentScene.enemy.energy);
+
+  $(".enemyName").html(game.currentScene.enemy.name);
+  $(".en-hp").html(game.currentScene.enemy.health);
+  $(".en-en").html(game.currentScene.enemy.energy);
 }
 
 $(document).ready(function()
@@ -55,6 +59,7 @@ $(document).ready(function()
     Game.loadScene(game);
     $("#init").addClass("hidden");
     $("#wholeGame").removeClass("hidden");
+    Sidebar.log(`Game Initialized`);
     refresh(game);
   });
 

@@ -3,11 +3,34 @@ body {
     background-size: cover;
 }
 
-.playingCard {
+.playingCard , button , .sidebarLog {
   width: 200px;
   float: left;
   background-color: #ffffff;
   border-radius: 10px;
+  margin: 5px;
+}
+
+#player , #enemy , button , .sidebarLog {
+  margin-right: 40px;
+}
+
+.sidebarLog {
+  width: 600px;
+}
+
+.sidebarLog div {
+  padding: 5px;
+}
+
+.sidebarLog div:first-child {
+  background-color: #ffaaaa;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.sidebarLog div:nth-child(even) {
+  background-color: #aaaaaa;
 }
 
 .playingCard img {
@@ -33,7 +56,7 @@ body {
   margin: 0px;
 }
 
-.cardName , .cardFunc , .cardVar1 , .cardCost {
+.col-md-6 , .col-md-12 {
   border-radius: 10px;
   border: 1px solid #000000;
 }
