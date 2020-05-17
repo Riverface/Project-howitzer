@@ -19,24 +19,27 @@ export class Game
     Game.loadLoadouts(this);
   }
 
-  static tick(scene, cardsActive) {
+  static tick(scene, cardsActive, who) {
     for (var i = 0; i < cardsActive.length; i++)
     {
-      CardFunc[cardsActive[i].function](cardsActive[i].funcvar1, scene.enemy);
+      CardFunc[cardsActive[i].function](scene, cardsActive[i].funcvar1, scene[who]);
     }
     for (var j = 0; j < cardsActive.length; j++)
     {
-      Card.moveFromId(scene.player.hand, scene.player.discard, cardsActive[j].cardId);
+      Card.moveFromId(scene[who].hand, scene[who].discard, cardsActive[j].cardId);
     }
-    $("#pl-hp").html(scene.player.health);
-    $("#en-hp").html(scene.enemy.health);
-
-    if (scene.player.hand.length === 0 && scene.player.main.length === 0) {
-      Card.moveAll(scene.player.discard, scene.player.main);
+    if (scene[who].hand.length === 0 && scene[who].main.length === 0) {
+      Card.moveAll(scene[who].discard, scene[who].main);
     }
 
-    Card.draw(scene.player.main, scene.player.hand, scene.player.drawRate);
+    console.log("Enemy?", scene["enemy"].name);
+    Card.draw(scene[who].main, scene[who].hand, scene[who].drawRate);
+
     scene.turn++;
+
+    if (scene.turn%2===0) {
+      Game.tick(scene, [Card.findFromRandom(scene.enemy.hand)], "enemy")
+    }
   }
 
   static loadCards(game)

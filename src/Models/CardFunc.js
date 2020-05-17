@@ -7,7 +7,14 @@ export class CardFunc {
 
     // CAN BE CALLED VIA
     // CardFunc[card.function](card.funcvar1, targetobject);
-    static attack(dmg, tgt) {
-      tgt.health -= dmg;
+    static attack(scene, dmg, dealer) {
+      if (dealer === scene.player)
+      {
+        scene.enemy.health -= dmg;
+      }
+      else if (dealer === scene.enemy)
+      {
+        scene.player.health -= dmg;
+      }
     }
 }

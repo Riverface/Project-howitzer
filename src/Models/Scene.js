@@ -15,7 +15,14 @@ export class Scene
   {
     for (var i = 0; i < scene.player.cards.length; i++)
     {
-      Card.copyFromName(game.allCards, scene.player.hand, scene.player.cards[i]);
+      Card.copyFromName(game.allCards, scene.player.main, scene.player.cards[i]);
     }
+		Card.draw(scene.player.main, scene.player.hand, scene.player.drawRate);
+
+    for (var j = 0; j < scene.enemy.cards.length; j++)
+    {
+      Card.copyFromName(game.allCards, scene.enemy.main, scene.enemy.cards[j]);
+    }
+		Card.draw(scene.enemy.main, scene.enemy.hand, scene.enemy.drawRate);
   }
 }
