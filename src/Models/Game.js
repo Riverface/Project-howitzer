@@ -60,6 +60,13 @@ export class Game
       scene[who].health = scene[who].maxHealth;
     }
 
+    scene[who].statuses = scene[who].statuses.map( function(e) {
+      var eAltered = e;
+      eAltered.duration--;
+      return eAltered;
+    });
+    scene[who].statuses = scene[who].statuses.filter( e => e.duration > 0);
+
     scene.turn++;
 
     if (scene.turn%2===0) {

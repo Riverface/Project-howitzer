@@ -13,8 +13,8 @@
     },
     {
         "name": "TestCard2",
-        "function": "attack",
-        "funcvar1": 10,
+        "function": "inflictSelf",
+        "funcvar1": "shield-4",
         "cost": 10
     },
     {

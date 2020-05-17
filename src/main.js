@@ -7,11 +7,11 @@ import { Sidebar } from './Models/Sidebar';
 
 function drawCard(card, enemy)
 {
-  var newCard = $("#templateCard").clone();
-  newCard.attr("id",`card-${card.name}`);
+  var newCard = $(".templateCard").clone();
+  newCard.removeClass("templateCard");
 	newCard.attr("title",card.name);
   newCard.find("img").attr("src",`./IMG/CARDS/${card.name}.png`);
-  newCard.find(".cardName").text(card.name);
+  newCard.find(".cardName").text(card.name.toUpperCase());
   newCard.find(".cardFunc").text(card.function.toUpperCase());
   newCard.find(".cardVar1").text(card.funcvar1);
   newCard.find(".cardCost").text(card.cost);
@@ -23,6 +23,16 @@ function drawCard(card, enemy)
     });
   }
   return newCard;
+}
+
+function drawStatus(status)
+{
+  var newStatus = $(".templateStatus").clone();
+  newStatus.removeClass("templateStatus");
+  newStatus.find(".statusName").text(status.name.toUpperCase());
+  newStatus.find(".statusDur").text(status.duration);
+
+  return newStatus;
 }
 
 function refresh(game)
@@ -38,6 +48,13 @@ function refresh(game)
   {
     $(".enemyCards").append(drawCard(game.currentScene.enemy.hand[j], true));
   }
+
+  $(".playerStatus").empty();
+  for (var k = 0; k < game.currentScene.player.statuses.length; k++)
+  {
+    $(".playerStatus").append(drawStatus(game.currentScene.player.statuses[k]));
+  }
+
 
   $(".playerName").html(game.currentScene.player.name);
   $(".pl-hp").html(game.currentScene.player.health);

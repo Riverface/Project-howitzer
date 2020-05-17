@@ -1,4 +1,5 @@
 import $ from "jquery";
+import { StatusEffect } from "./StatusEffect";
 
 export class CardFunc {
     static testFunc(amnt) {
@@ -13,5 +14,10 @@ export class CardFunc {
 
     static repair(scene, amnt, dealer, tgt) {
       dealer.health += amnt;
+    }
+
+    static inflictSelf(scene, status, dealer, tgt) {
+      const unbaked = status.split("-");
+      dealer.statuses.push(new StatusEffect(unbaked[0], unbaked[1]));
     }
 }
