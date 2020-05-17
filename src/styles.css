@@ -1,6 +1,8 @@
 body {
-    background-image: url("./IMG/mainBackground.png");
-    background-size: cover;
+
+    background:#fff url("./IMG/mainBackground.png") center center no-repeat;
+    background-attachment: fixed;
+    background-size: 100% auto;
 }
 
 .playingCard , button , .sidebarLog {

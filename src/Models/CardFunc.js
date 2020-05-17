@@ -7,22 +7,11 @@ export class CardFunc {
 
     // CAN BE CALLED VIA
     // CardFunc[card.function](card.funcvar1, targetobject);
-    static attack(scene, amnt, dealer) {
-      if (dealer === scene.player) // Messy function, consider cleanup
-      {
-        scene.enemy.health -= amnt;
-      }
-      else if (dealer === scene.enemy)
-      {
-        scene.player.health -= amnt;
-      }
+    static attack(scene, amnt, dealer, tgt) {
+      tgt.health -= amnt;
     }
 
-    static repair(scene, amnt, dealer) {
+    static repair(scene, amnt, dealer, tgt) {
       dealer.health += amnt;
-      if (dealer.health > dealer.maxHealth)
-      {
-        dealer.health = dealer.maxHealth;
-      }
     }
 }

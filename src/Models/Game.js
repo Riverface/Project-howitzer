@@ -22,6 +22,10 @@ export class Game
 
   static tick(scene, cardsActive, who) {
     Sidebar.log(`Tick!`);
+    var tgt = "enemy";
+    if (who === "enemy") {
+      tgt = "player"
+    }
     const totalCost = cardsActive.reduce(function(con, e) {
       return con+e.cost
     }, 0);
@@ -30,7 +34,7 @@ export class Game
       for (var i = 0; i < cardsActive.length; i++)
       {
         Sidebar.log(`${who}: used ${cardsActive[i].name}! ${cardsActive[i].function}!`);
-        CardFunc[cardsActive[i].function](scene, cardsActive[i].funcvar1, scene[who]);
+        CardFunc[cardsActive[i].function](scene, cardsActive[i].funcvar1, scene[who], scene[tgt]);
         scene[who].energy -= cardsActive[i].cost;
       }
       for (var j = 0; j < cardsActive.length; j++)
@@ -52,7 +56,10 @@ export class Game
     if (scene[who].energy > scene[who].maxEnergy) {
       scene[who].energy = scene[who].maxEnergy;
     }
-    
+    if (scene[who].health > scene[who].maxHealth) {
+      scene[who].health = scene[who].maxHealth;
+    }
+
     scene.turn++;
 
     if (scene.turn%2===0) {

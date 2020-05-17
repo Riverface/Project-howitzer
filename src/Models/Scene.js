@@ -7,7 +7,7 @@ export class Scene
 	{
 		this.player = $.extend({}, game.allLoadouts[0]);
 		this.enemy = $.extend({}, game.allEnemies[0]);
-    this.turn = 0; // ODDS ARE PLAYER, EVENS ARE ENEMY;
+    this.turn = 1; // ODDS ARE PLAYER, EVENS ARE ENEMY;
 		//this.activeUnits = ["player", "enemy"];
     Scene.populateUnits(game, this, "player");
     Scene.populateUnits(game, this, "enemy");
