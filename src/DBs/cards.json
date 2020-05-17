@@ -2,26 +2,31 @@
     {
         "name": "TestCard0",
         "function": "attack",
-        "funcvar1": 10
+        "funcvar1": 10,
+        "cost": 10
     },
     {
         "name": "TestCard1",
         "function": "attack",
-        "funcvar1": 10
+        "funcvar1": 10,
+        "cost": 10
     },
     {
         "name": "TestCard2",
         "function": "attack",
-        "funcvar1": 10
+        "funcvar1": 10,
+        "cost": 10
     },
     {
         "name": "TestCard3",
-        "function": "attack",
-        "funcvar1": 10
+        "function": "repair",
+        "funcvar1": 10,
+        "cost": 10
     },
     {
         "name": "Gatling",
         "function": "attack",
-        "funcvar1": 10
+        "funcvar1": 10,
+        "cost": 10
     }
 ]

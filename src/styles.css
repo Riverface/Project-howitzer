@@ -33,7 +33,7 @@ body {
   margin: 0px;
 }
 
-.cardName , .cardFunc , .cardVar1 {
+.cardName , .cardFunc , .cardVar1 , .cardCost {
   border-radius: 10px;
   border: 1px solid #000000;
 }

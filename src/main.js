@@ -13,6 +13,7 @@ function drawCard(card, enemy)
   newCard.find(".cardName").text(card.name);
   newCard.find(".cardFunc").text(card.function.toUpperCase());
   newCard.find(".cardVar1").text(card.funcvar1);
+  newCard.find(".cardCost").text(card.cost);
 
   if (enemy !== true)
   {
@@ -39,6 +40,9 @@ function refresh(game)
 
   $("#pl-hp").html(game.currentScene.player.health);
   $("#en-hp").html(game.currentScene.enemy.health);
+
+  $("#pl-en").html(game.currentScene.player.energy);
+  $("#en-en").html(game.currentScene.enemy.energy);
 }
 
 $(document).ready(function()

@@ -20,20 +20,29 @@ export class Game
   }
 
   static tick(scene, cardsActive, who) {
-    for (var i = 0; i < cardsActive.length; i++)
+    const totalCost = cardsActive.reduce(function(con, e) {
+      return con+e.cost
+    }, 0);
+    if (scene[who].energy >= totalCost)
     {
-      CardFunc[cardsActive[i].function](scene, cardsActive[i].funcvar1, scene[who]);
-    }
-    for (var j = 0; j < cardsActive.length; j++)
-    {
-      Card.moveFromId(scene[who].hand, scene[who].discard, cardsActive[j].cardId);
+      for (var i = 0; i < cardsActive.length; i++)
+      {
+        CardFunc[cardsActive[i].function](scene, cardsActive[i].funcvar1, scene[who]);
+        scene[who].energy -= cardsActive[i].cost;
+      }
+      for (var j = 0; j < cardsActive.length; j++)
+      {
+        Card.moveFromId(scene[who].hand, scene[who].discard, cardsActive[j].cardId);
+      }
+    } else {
+      console.log(who, "Overloaded!");
     }
     if (scene[who].hand.length === 0 && scene[who].main.length === 0) {
       Card.moveAll(scene[who].discard, scene[who].main);
     }
 
     Card.draw(scene[who].main, scene[who].hand, scene[who].drawRate);
-
+    scene[who].energy += scene[who].energyRegen;
     scene.turn++;
 
     if (scene.turn%2===0) {
