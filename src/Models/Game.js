@@ -67,6 +67,12 @@ export class Game
     });
     scene[who].statuses = scene[who].statuses.filter( e => e.duration > 0);
 
+    if (scene.player.health <= 0) {
+      alert(`${scene.player.name} is dead. Not big surprise`);
+    } else if (scene.enemy.health <= 0) {
+      alert(`${scene.enemy.name} is dead. gg`);
+    }
+
     scene.turn++;
 
     if (scene.turn%2===0) {

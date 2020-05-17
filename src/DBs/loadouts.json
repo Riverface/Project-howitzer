@@ -1,24 +1,22 @@
 [
     {
-        "name": "TestPlayer0",
+        "name": "Gluteus Maximus",
+        "cards": ["Gatling", "Gatling", "Gatling", "Gatling", "Field Repair", "Field Repair", "Shield", "Shield", "Battlefield Purge", "Nanobots", "ECM"],
+        "maxHealth": 100,
+        "health": 100,
+        "maxEnergy": 100,
+        "energy": 100,
+        "energyRegen": 12,
+        "drawRate": 2
+    },
+    {
+        "name": "TestPlayer1",
         "cards": ["TestCard0", "TestCard1", "TestCard2", "TestCard3"],
         "maxHealth": 100,
         "health": 100,
         "maxEnergy": 100,
         "energy": 100,
         "energyRegen": 5,
-        "drawRate": 2,
-        "maxHand": 3
-    },
-    {
-        "name": "TestPlayer1",
-        "cards": ["TestCard2", "TestCard3"],
-        "maxHealth": 100,
-        "health": 100,
-        "maxEnergy": 100,
-        "energy": 100,
-        "energyRegen": 5,
-        "drawRate": 2,
-        "maxHand": 3
+        "drawRate": 2
     }
 ]

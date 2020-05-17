@@ -7,8 +7,8 @@
     },
     {
         "name": "TestCard1",
-        "function": "attack",
-        "funcvar1": 10,
+        "function": "purgeAll",
+        "funcvar1": 0,
         "cost": 10
     },
     {
@@ -27,6 +27,36 @@
         "name": "Gatling",
         "function": "attack",
         "funcvar1": 10,
+        "cost": 10
+    },
+    {
+        "name": "Field Repair",
+        "function": "repair",
+        "funcvar1": 10,
+        "cost": 10
+    },
+    {
+        "name": "Shield",
+        "function": "inflictSelf",
+        "funcvar1": "shield-4",
+        "cost": 10
+    },
+    {
+        "name": "Battlefield Purge",
+        "function": "purgeAll",
+        "funcvar1": 0,
+        "cost": 10
+    },
+    {
+        "name": "Nanobots",
+        "function": "inflictSelf",
+        "funcvar1": "repMode-2",
+        "cost": 10
+    },
+    {
+        "name": "ECM",
+        "function": "inflictTgt",
+        "funcvar1": "weaken-4",
         "cost": 10
     }
 ]

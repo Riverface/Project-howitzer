@@ -55,15 +55,22 @@ function refresh(game)
     $(".playerStatus").append(drawStatus(game.currentScene.player.statuses[k]));
   }
 
+  $(".enemyStatus").empty();
+  for (var l = 0; l < game.currentScene.enemy.statuses.length; l++)
+  {
+    $(".enemyStatus").append(drawStatus(game.currentScene.enemy.statuses[l]));
+  }
 
   $(".playerName").html(game.currentScene.player.name);
   $(".pl-hp").html(game.currentScene.player.health);
   $(".pl-en").html(game.currentScene.player.energy);
 
-
   $(".enemyName").html(game.currentScene.enemy.name);
   $(".en-hp").html(game.currentScene.enemy.health);
   $(".en-en").html(game.currentScene.enemy.energy);
+
+  $("#player").find("img").attr("src",`./IMG/${game.currentScene.player.name}.png`);
+  $("#enemy").find("img").attr("src",`./IMG/${game.currentScene.enemy.name}.png`);
 }
 
 $(document).ready(function()
